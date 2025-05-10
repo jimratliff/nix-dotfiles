@@ -16,7 +16,7 @@
         };
       in {
         darwinConfigurations.default = darwin.lib.darwinSystem {
-          inherit system;
+          inherit system pkgs;
           modules = [
             ({ config, pkgs, ... }: {
               environment.systemPackages = with pkgs; [
