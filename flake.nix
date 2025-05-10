@@ -4,36 +4,31 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
     darwin.url = "github:LnL7/nix-darwin";
-    flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, darwin, flake-utils, ... }:
-    flake-utils.lib.eachDefaultSystem (system:
-      let
-        pkgs = import nixpkgs {
-          inherit system;
-          config.allowUnfree = true;
-        };
-      in {
-        darwinConfigurations.default = darwin.lib.darwinSystem {
-          inherit system pkgs;
-          modules = [
-            ({ config, pkgs, ... }: {
-              environment.systemPackages = with pkgs; [
-                htop             # Example nixpkg
-              ];
+  outputs = { self, nixpkgs, darwin, ... }: {
+    darwinConfigurations.default = darwin.lib.darwinSystem {
+      system = "aarch64-darwin";
+      pkgs = import nixpkgs {
+        system = "aarch64-darwin";
+        config.allowUnfree = true;
+      };
 
-              homebrew.enable = true;
-              homebrew.brews = [ "mas" ];           # Needed for MAS app installs
-              homebrew.casks = [ "raycast" ];        # Example Homebrew GUI app
-              homebrew.masApps = {
-                "Magnet" = 441258766;                 # Example MAS app
-              };
+      modules = [
+        ({ config, pkgs, ... }: {
+          environment.systemPackages = with pkgs; [ htop ];
 
-              programs.zsh.enable = true;
-              services.nix-daemon.enable = true;
-            })
-          ];
-        };
-      });
+          homebrew.enable = true;
+          homebrew.brews = [ "mas" ];
+          homebrew.casks = [ "raycast" ];
+          homebrew.masApps = {
+            "Magnet" = 441258766;
+          };
+
+          programs.zsh.enable = true;
+          services.nix-daemon.enable = true;
+        })
+      ];
+    };
+  };
 }
