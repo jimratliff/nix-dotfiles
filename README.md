@@ -28,7 +28,7 @@ This flake should be cloned into:
 
 5. Clone this repo:
    ```zsh
-   git clone https://your-repo-url /Users/nixadmin/.nix-config
+   git clone https://github.com/jimratliff/nix-dotfiles.git /Users/nixadmin/.nix-config
    cd /Users/nixadmin/.nix-config
    ```
 
