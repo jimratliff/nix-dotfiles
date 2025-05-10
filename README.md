@@ -33,6 +33,12 @@ This flake should be cloned into:
    ```
 
 6. Apply the configuration:
+   If this is the **first time** you're applying the configuration on a new machine, the `darwin-rebuild` tool won't be installed yet. Instead, run:
+   ```zsh
+   nix build .#darwinConfigurations.$(hostname).system
+   ./result/sw/bin/darwin-rebuild switch --flake .
+   ```
+   On subsequent runs, once `darwin-rebuild` is installed into the system profile, you can use the simpler form:
    ```zsh
    darwin-rebuild switch --flake .
    ```
@@ -41,7 +47,7 @@ This flake should be cloned into:
 
 * `htop` (via **Nixpkgs**)
 * `raycast` (via **Homebrew Cask**)
-* `Magnet` (via **MAS; App Store login required)
+* `Magnet` (via **MAS**; App Store login required)
 
 ## 🧼 Notes
 
