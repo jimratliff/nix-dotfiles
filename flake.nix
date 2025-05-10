@@ -15,7 +15,7 @@
           config.allowUnfree = true;
         };
       in {
-        darwinConfigurations."$(hostname)" = darwin.lib.darwinSystem {
+        darwinConfigurations.default = darwin.lib.darwinSystem {
           inherit system;
           modules = [
             ({ config, pkgs, ... }: {
