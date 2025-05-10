@@ -2,8 +2,9 @@
   description = "Minimal nix-admin flake for initial system-wide setup on macOS.";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
-    darwin.url = "github:LnL7/nix-darwin";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05-darwin";
+    darwin.url = "github:LnL7/nix-darwin"/release-25.05";
+    darwin.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { self, nixpkgs, darwin, ... }: {
