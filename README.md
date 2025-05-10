@@ -3,6 +3,15 @@
 
 This flake is intended for use by the `nix-admin` user on a Mac to configure system-wide settings and install core applications.
 
+## 🛠️ Prerequisites
+
+Before using this flake, ensure the following are installed on the system:
+
+- **Nix** must be installed (using the [multi-user installation](https://nixos.org/download.html) is recommended).
+- **Git** must be installed.
+  - To check: open Terminal and run `git --version`
+  - If Git is not installed, macOS will prompt you to install the Apple command-line developer tools, which includes Git.
+
 ## 📁 Installation Location
 
 This flake should be cloned into:
