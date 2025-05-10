@@ -1,0 +1,22 @@
+# Ignore local build artifacts
+/result
+/result-*           # Nix build symlinks
+
+# Logs
+*.log
+
+# Editor / system files
+.DS_Store
+*.swp
+*.swo
+
+# macOS metadata
+.AppleDouble
+.LSOverride
+
+# Optional: secrets or overrides (if you ever include them)
+secrets.nix
+overrides.nix
+
+# Optional: user-specific runtime hooks or scratch files
+run-local.sh
