@@ -18,6 +18,7 @@
       modules = [
         ({ config, pkgs, ... }: {
           system.stateVersion = 6;
+          nix.enable = false;
           environment.systemPackages = with pkgs; [ htop ];
 
           homebrew.enable = true;
