@@ -1,18 +1,18 @@
-# nixadmin macOS configuration
+# nix-admin macOS configuration
 
-This flake is intended for use by the `nixadmin` user on a Mac to configure system-wide settings and install core applications.
+This flake is intended for use by the `nix-admin` user on a Mac to configure system-wide settings and install core applications.
 
 ## 📁 Installation location
 
 This flake should be cloned into:
 
 ```
-/Users/nixadmin/.nix-config
+/Users/nix-admin/.nix-config
 ```
 
-## 🚀 Getting started: initial setup for `nixadmin`
+## 🚀 Getting started: initial setup for `nix-admin`
 
-1. Log in to the `nixadmin` user account
+1. Log in to the `nix-admin` user account
 
 2. Ensure Nix is installed:
   - To check: open Terminal and run `nix --version`
@@ -28,8 +28,8 @@ This flake should be cloned into:
 
 5. Clone this repo:
    ```zsh
-   git clone https://github.com/jimratliff/nix-dotfiles.git /Users/nixadmin/.nix-config
-   cd /Users/nixadmin/.nix-config
+   git clone https://github.com/jimratliff/nix-dotfiles.git /Users/nix-admin/.nix-config
+   cd /Users/nix-admin/.nix-config
    ```
 
 6. Apply the configuration:
@@ -58,8 +58,8 @@ This flake should be cloned into:
 ## 🔄 Optional: Preparing for Multi-User Home Manager
 If this flake is later used by other users (e.g., to apply shared Home Manager configurations), then:
 ```zsh
-chmod -R o+rX /Users/nixadmin/.nix-config
-sudo ln -s /Users/nixadmin/.nix-config /etc/nix-config
+chmod -R o+rX /Users/nix-admin/.nix-config
+sudo ln -s /Users/nix-admin/.nix-config /etc/nix-config
 ```
 
 This ensures the flake is readable and easily accessible across users.
