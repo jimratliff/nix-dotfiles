@@ -1,6 +1,8 @@
 {
   description = "Minimal nix-admin flake for initial system-wide setup on macOS.";
 
+# This flake assumes that nix was installed using the Determinate Installer.
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     darwin.url = "github:LnL7/nix-darwin/master";
