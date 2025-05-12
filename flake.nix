@@ -45,7 +45,7 @@
           # homebrew.brews = [ "mas" ];
           # homebrew.masApps = {
           #   "Magnet" = 441258766;
-          };
+          # };
 
           programs.zsh.enable = true;
         })
