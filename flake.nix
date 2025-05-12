@@ -32,6 +32,7 @@
             firefox        # Web browser built from Firefox source tree
             git            # Distributed version control system. (More up to date than that supplied by macOS.)
             iterm2         # Replacement for Terminal and the successor to iTerm
+            raycast        # Control your tools with a few keystrokes
             vls            # Cross-platform media player and streaming server
             vscode         # Open source source code editor developed by Microsoft for Windows, Linux and macOS 
                            #   Note: There is also `vscode-with-extensions`. I can’t tell the two apart.
