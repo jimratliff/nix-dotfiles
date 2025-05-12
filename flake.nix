@@ -41,11 +41,10 @@
             zotero         # Collect, organize, cite, and share your research sources
           ];
 
-          homebrew.enable = true;
-          homebrew.brews = [ "mas" ];
-          homebrew.casks = [ "raycast" ];
-          homebrew.masApps = {
-            "Magnet" = 441258766;
+          # homebrew.enable = true;
+          # homebrew.brews = [ "mas" ];
+          # homebrew.masApps = {
+          #   "Magnet" = 441258766;
           };
 
           programs.zsh.enable = true;
